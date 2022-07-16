@@ -3,7 +3,8 @@
 *binary_tree_nodes -  function that measures the leaves of a binary tree
 *@tree: tree schema
 **/
-size_t binary_tree_nodes(const binary_tree_t *tree){
+size_t binary_tree_nodes(const binary_tree_t *tree)
+{
     if (!tree)
         return 0;
     else if (!tree->left && tree->right)
