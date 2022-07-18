@@ -6,12 +6,12 @@
 **/
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
+	size_t cont = 0;
+
 	if (!tree)
-		return 0;
-	else if (!tree->left && tree->right)
-		return (1 + binary_tree_nodes(tree->right));
-	else if (tree->left && !tree->right)
-		return (1 + binary_tree_nodes(tree->left));
-	else
-		return (binary_tree_nodes(tree->right) + binary_tree_nodes(tree->left));
-}
+		return (0);
+	if (tree->left || tree->right)
+		return (binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right))
+		+ 1;
+	return (cont);
+		
