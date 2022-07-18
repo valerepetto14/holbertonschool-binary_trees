@@ -1,10 +1,10 @@
 #include "binary_trees.h"
-i
 /**
 *binary_tree_is_root - function that checks a node is a root
 *@node: tree schema
 *Return: int
 **/
+
 int binary_tree_is_root(const binary_tree_t *node)
 {
 	if (!node)
